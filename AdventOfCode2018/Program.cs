@@ -23,6 +23,18 @@ namespace AdventOfCode2018 {
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
+            #region Day1
+            Day2 day2 = new Day2();
+            sw.Start();
+            var day2TaskA = day2.CalculateCheckSum(ReadLinesFromFile("Inputs/Day2Input.txt"));
+            var day2TaskB = day2.FindCorrectBoxes(ReadLinesFromFile("Inputs/Day2Input.txt"));
+            sw.Stop();
+            Console.WriteLine("--- Day 2: Inventory Management System ---");
+            Console.WriteLine("Answer to part 1 is: " + day2TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day2TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
             Console.ReadLine();
         }
 
