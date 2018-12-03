@@ -23,7 +23,7 @@ namespace AdventOfCode2018 {
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
-            #region Day1
+            #region Day2
             Day2 day2 = new Day2();
             sw.Start();
             var day2TaskA = day2.CalculateCheckSum(ReadLinesFromFile("Inputs/Day2Input.txt"));
@@ -32,6 +32,18 @@ namespace AdventOfCode2018 {
             Console.WriteLine("--- Day 2: Inventory Management System ---");
             Console.WriteLine("Answer to part 1 is: " + day2TaskA);
             Console.WriteLine("Answer to part 2 is: " + day2TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day3
+            Day3 day3 = new Day3();
+            sw.Start();
+            var day3TaskA = day3.TaskA(ReadLinesFromFile("Inputs/Day3Input.txt"));
+            var day3TaskB = day3.TaskB(ReadLinesFromFile("Inputs/Day3Input.txt"));
+            sw.Stop();
+            Console.WriteLine("--- Day 3: ---");
+            Console.WriteLine("Answer to part 1 is: " + day3TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day3TaskB);
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
