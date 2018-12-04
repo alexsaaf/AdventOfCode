@@ -17,7 +17,7 @@ namespace AdventOfCode2018 {
             var day1taskA = day1.TaskA(ReadLinesFromFile("Inputs/Day1Input.txt"));
             var day1TaskB = day1.TaskB(ReadLinesFromFile("Inputs/Day1Input.txt"));
             sw.Stop();
-            Console.WriteLine("--- Day 1: Inverse Captcha ---");
+            Console.WriteLine("--- Day 1: Chronal Calibration ---");
             Console.WriteLine("Answer to part 1 is: " + day1taskA);
             Console.WriteLine("Answer to part 2 is: " + day1TaskB);
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
@@ -39,11 +39,24 @@ namespace AdventOfCode2018 {
             Day3 day3 = new Day3();
             sw.Start();
             var day3TaskA = day3.TaskA(ReadLinesFromFile("Inputs/Day3Input.txt"));
-            var day3TaskB = day3.TaskB(ReadLinesFromFile("Inputs/Day3Input.txt"));
+            // Skipping this because it takes time
+            //var day3TaskB = day3.TaskB(ReadLinesFromFile("Inputs/Day3Input.txt"));
             sw.Stop();
-            Console.WriteLine("--- Day 3: ---");
+            Console.WriteLine("--- Day 3: No Matter How You Slice It ---");
             Console.WriteLine("Answer to part 1 is: " + day3TaskA);
-            Console.WriteLine("Answer to part 2 is: " + day3TaskB);
+            //Console.WriteLine("Answer to part 2 is: " + day3TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day4
+            Day4 day4 = new Day4();
+            sw.Start();
+            var day4TaskA = day4.TaskA(ReadLinesFromFile("Inputs/Day4Input.txt"));
+            var day4TaskB = day4.TaskB(ReadLinesFromFile("Inputs/Day4Input.txt"));
+            sw.Stop();
+            Console.WriteLine("--- Day 4: ---");
+            Console.WriteLine("Answer to part 1 is: " + day4TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day4TaskB);
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
