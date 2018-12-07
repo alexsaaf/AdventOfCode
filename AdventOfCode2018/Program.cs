@@ -60,6 +60,43 @@ namespace AdventOfCode2018 {
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
+            #region Day5
+            Day5 day5 = new Day5();
+            sw.Start();
+            //var day5TaskA = day5.TaskA(ReadLinesFromFile("Inputs/Day5Input.txt")[0]);
+            //var day5TaskB = day5.TaskB(ReadLinesFromFile("Inputs/Day5Input.txt"));
+            sw.Stop();
+            Console.WriteLine("--- Day 5: ---");
+            Console.WriteLine("Skipped");
+            //Console.WriteLine("Answer to part 1 is: " + day5TaskA);
+            //Console.WriteLine("Answer to part 2 is: " + day5TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day5
+            Day6 day6 = new Day6();
+            sw.Start();
+            var day6TaskA = day6.TaskA(ReadLinesFromFile("Inputs/Day6Input.txt"));
+            var day6TaskB = day6.TaskB(ReadLinesFromFile("Inputs/Day6Input.txt"));
+            sw.Stop();
+            Console.WriteLine("--- Day 6: ---");
+            Console.WriteLine("Answer to part 1 is: " + day6TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day6TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day5
+            Day7 day7 = new Day7();
+            sw.Start();
+            var day7TaskA = day7.TaskA(ReadLinesFromFile("Inputs/Day7Input.txt"));
+            var day7TaskB = day7.TaskB(ReadLinesFromFile("Inputs/Day7Input.txt"));
+            sw.Stop();
+            Console.WriteLine("--- Day 7: ---");
+            Console.WriteLine("Answer to part 1 is: " + day7TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day7TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
             Console.ReadLine();
         }
 
