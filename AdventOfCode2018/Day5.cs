@@ -39,8 +39,6 @@ namespace AdventOfCode2018 {
         public string TaskB(string[] input) {
             int shortest = int.MaxValue;
             char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-
-
             foreach (char character in alphabet) {
                 // Remove character from chain and calculate with taskA
                 string chainCopy = input[0];
@@ -50,8 +48,6 @@ namespace AdventOfCode2018 {
                 if (result < shortest)
                     shortest = result;
             }
-
-
             return shortest.ToString();
         }
 

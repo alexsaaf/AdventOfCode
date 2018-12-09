@@ -73,7 +73,7 @@ namespace AdventOfCode2018 {
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
-            #region Day5
+            #region Day6
             Day6 day6 = new Day6();
             sw.Start();
             var day6TaskA = day6.TaskA(ReadLinesFromFile("Inputs/Day6Input.txt"));
@@ -85,7 +85,7 @@ namespace AdventOfCode2018 {
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
-            #region Day5
+            #region Day7
             Day7 day7 = new Day7();
             sw.Start();
             var day7TaskA = day7.TaskA(ReadLinesFromFile("Inputs/Day7Input.txt"));
@@ -94,6 +94,31 @@ namespace AdventOfCode2018 {
             Console.WriteLine("--- Day 7: ---");
             Console.WriteLine("Answer to part 1 is: " + day7TaskA);
             Console.WriteLine("Answer to part 2 is: " + day7TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+
+            #region Day8
+            Day8 day8 = new Day8();
+            sw.Start();
+            var day8TaskA = day8.TaskA(ReadLinesFromFile("Inputs/Day8Input.txt")[0]);
+            var day8TaskB = day8.TaskB(ReadLinesFromFile("Inputs/Day8Input.txt")[0]);
+            sw.Stop();
+            Console.WriteLine("--- Day 8: ---");
+            Console.WriteLine("Answer to part 1 is: " + day8TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day8TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+
+            #region Day9
+            sw.Start();
+            var day9TaskA = Day9.TaskA(466,71436);
+            var day9TaskB = Day9.TaskA(466,71436 * 100);
+            sw.Stop();
+            Console.WriteLine("--- Day 9: ---");
+            Console.WriteLine("Answer to part 1 is: " + day9TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day9TaskB);
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
