@@ -122,6 +122,116 @@ namespace AdventOfCode2018 {
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
+            #region Day10
+            //var day10TaskB = Day10.TaskB(ReadLinesFromFile("Inputs/Day10Input.txt"));
+            Console.WriteLine("--- Day 10: ---");
+            Console.WriteLine("Answer to part 1 is: ");
+            sw.Start();
+            var day10TaskA = Day10.TaskA(ReadLinesFromFile("Inputs/Day10Input.txt"));
+            sw.Stop();
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day11
+            //var day10TaskB = Day10.TaskB(ReadLinesFromFile("Inputs/Day10Input.txt"));
+            Console.WriteLine("--- Day 10: ---");
+            sw.Start();
+            //var day11TaskA = Day11.TaskA();
+            sw.Stop();
+            //Console.WriteLine("Answer to part 1 is: " + day11TaskA);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day12
+            //var day10TaskB = Day10.TaskB(ReadLinesFromFile("Inputs/Day10Input.txt"));
+            Console.WriteLine("--- Day 10: ---");
+            sw.Start();
+            var day12TaskA = Day12.TaskA(ReadLinesFromFile("Inputs/Day12Input.txt"));
+            var day12TaskB = Day12.TaskB(ReadLinesFromFile("Inputs/Day12Input.txt"));
+            sw.Stop();
+            Console.WriteLine("Answer to part 1 is: " + day12TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day12TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day12
+            //var day10TaskB = Day10.TaskB(ReadLinesFromFile("Inputs/Day10Input.txt"));
+            Console.WriteLine("--- Day 13: ---");
+            sw.Start();
+            //var day13TaskA = Day13.TaskA(ReadLinesFromFile("Inputs/Day13Input.txt"));
+            var day13TaskB = Day13.TaskB(ReadLinesFromFile("Inputs/Day13Input.txt"));
+            sw.Stop();
+           // Console.WriteLine("Answer to part 1 is: " + day13TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day13TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day14 
+            //var day10TaskB = Day10.TaskB(ReadLinesFromFile("Inputs/Day10Input.txt"));
+            Console.WriteLine("--- Day 14: ---");
+            sw.Start();
+            //var day14TaskA = Day14.TaskA();
+            //var day13TaskB = Day13.TaskB(ReadLinesFromFile("Inputs/Day13Input.txt"));
+            sw.Stop();
+            // Console.WriteLine("Answer to part 1 is: " + day13TaskA);
+            //Console.WriteLine("Answer to part 1 is: " + day14TaskA);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day15
+            //var day10TaskB = Day10.TaskB(ReadLinesFromFile("Inputs/Day10Input.txt"));
+            Console.WriteLine("--- Day 15: ---");
+            Console.WriteLine("Didnt manage to solve 15 in C#, built a python script with help instead.");
+            Console.WriteLine("The two C# attempts are still here, one of them solved all test inputs but not the actual problem");
+            #endregion
+
+
+            #region Day16
+            Console.WriteLine("--- Day 16: ---");
+            sw.Start();
+            var day16TaskA = Day16.TaskA(ReadLinesFromFile("Inputs/Day16Input.txt"));
+            var day16TaskB = Day16.TaskB(ReadLinesFromFile("Inputs/Day16BInput.txt"));
+            sw.Stop();
+            Console.WriteLine("Answer to part 1 is: " + day16TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day16TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day17
+            Console.WriteLine("--- Day 17: ---");
+            sw.Start();
+            Day17 day17 = new Day17();
+            var day17TaskA = day17.TaskA(ReadLinesFromFile("Inputs/Day17Input.txt"));
+            //var day16TaskB = Day16.TaskB(ReadLinesFromFile("Inputs/Day16BInput.txt"));
+            sw.Stop();
+            Console.WriteLine("Answer to part 1 is: " + day17TaskA);
+            //Console.WriteLine("Answer to part 2 is: " + day16TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day17
+            Console.WriteLine("--- Day 18: ---");
+            sw.Start();
+            var day18TaskA = Day18.TaskA(ReadLinesFromFile("Inputs/Day18Input.txt"));
+            var day18TaskB = Day18.TaskB(ReadLinesFromFile("Inputs/Day18Input.txt"));
+            sw.Stop();
+            Console.WriteLine("Answer to part 1 is: " + day18TaskA);
+            Console.WriteLine("Answer to part 2 is: " + day18TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day17
+            Console.WriteLine("--- Day 19: ---");
+            sw.Start();
+            var day19TaskA = Day19.TaskA(ReadLinesFromFile("Inputs/Day19Input.txt"));
+            //var day18TaskB = Day18.TaskB(ReadLinesFromFile("Inputs/Day18Input.txt"));
+            sw.Stop();
+            Console.WriteLine("Answer to part 1 is: " + day19TaskA);
+            //Console.WriteLine("Answer to part 2 is: " + day18TaskB);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+
             Console.ReadLine();
         }
 
