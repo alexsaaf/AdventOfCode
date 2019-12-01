@@ -19,20 +19,15 @@ namespace AdventOfCode2019 {
         public static double TaskB(string[] input) {
             IEnumerable<string> modules = new List<string>(input);
 
-            double fuel = 0;
-
-            foreach (double module in modules.Select(module => double.Parse(module))) {
-                double requiredFule = CalculateFuel(module);
-                fuel += requiredFule;
-
-                double additionalFule = CalculateFuel(requiredFule);
-                while (additionalFule > 0) {
-                    fuel += additionalFule;
-                    additionalFule = CalculateFuel(additionalFule);
+            return modules.Select(module => double.Parse(module)).Sum(mass => {
+                double added = 0;
+                double newFuel = CalculateFuel(mass);
+                while (newFuel > 0) {
+                    added += newFuel;
+                    newFuel = CalculateFuel(newFuel);
                 }
-            }
-
-            return fuel;
+                return added;
+            });
         }
 
     }
