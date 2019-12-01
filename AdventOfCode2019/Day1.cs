@@ -30,5 +30,18 @@ namespace AdventOfCode2019 {
             });
         }
 
+        public static double TaskBAlternative(string[] input) {
+            IEnumerable<double> modules = new List<string>(input).Select(module => double.Parse(module));
+
+            double CalculateFuel(double weight) {
+                double baseFuel = Math.Floor(weight / 3) - 2;
+                if (baseFuel <= 0)
+                    return 0;
+                return baseFuel + CalculateFuel(baseFuel);
+            }
+
+            return modules.Sum(CalculateFuel);
+        }
+
     }
 }
