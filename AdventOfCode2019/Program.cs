@@ -13,13 +13,22 @@ namespace AdventOfCode2019 {
             var day1taskA = Day1.TaskA(ReadLinesFromFile("Inputs/Day1Input.txt"));
             var day1TaskB = Day1.TaskBAlternative(ReadLinesFromFile("Inputs/Day1Input.txt"));
             sw.Stop();
-            Console.WriteLine("--- Day 1: Chronal Calibration ---");
+            Console.WriteLine("--- Day 1: The Tyranny of the Rocket Equation ---");
             Console.WriteLine("Answer to part 1 is: " + day1taskA.ToString());
             Console.WriteLine("Answer to part 2 is: " + day1TaskB.ToString());
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
-
+            #region Day2
+            sw.Start();
+            var day2TaskA = Day2.TaskA(ReadLinesFromFile("Inputs/Day2Input.txt"));
+            var day2TaskB = Day2.TaskB(ReadLinesFromFile("Inputs/Day2Input.txt"));
+            sw.Stop();
+            Console.WriteLine("--- Day 2: 1202 Program Alarm ---");
+            Console.WriteLine("Answer to part 1 is: " + day2TaskA.ToString());
+            Console.WriteLine("Answer to part 2 is: " + day2TaskB.ToString());
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
 
 
         }
