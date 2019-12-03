@@ -32,12 +32,12 @@ namespace AdventOfCode2019 {
 
             #region Day3
             sw.Start();
-            var day3TaskA = Day3.TaskA(ReadLinesFromFile("Inputs/Day3Input.txt"));
+            var day3 = Day3.TaskA(ReadLinesFromFile("Inputs/Day3Input.txt"));
             //var day2TaskB = Day2.TaskB(ReadLinesFromFile("Inputs/Day2Input.txt"));
             sw.Stop();
             Console.WriteLine("--- Day 2: 1202 Program Alarm ---");
-            Console.WriteLine("Answer to part 1 is: " + day3TaskA.ToString());
-            //Console.WriteLine("Answer to part 2 is: " + day3TaskB.ToString());
+            Console.WriteLine("Answer to part 1 is: " + day3.Item1.ToString());
+            Console.WriteLine("Answer to part 2 is: " + day3.Item2.ToString());
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 

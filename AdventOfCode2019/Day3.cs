@@ -7,66 +7,48 @@ using System.Numerics;
 namespace AdventOfCode2019 {
     class Day3 {
 
-        public static double TaskA(string[] input) {
-            List<Vector2> wireA = GetPointsAlongPath(input[0]);
-            List<Vector2> wireB = GetPointsAlongPath(input[1]);
+        public static Tuple<int, int> TaskA(string[] input) {
+            Dictionary<(int, int), int> wireA = GetPointsInWire(input[0]);
+            Dictionary<(int, int), int> wireB = GetPointsInWire(input[1]);
 
-            //Console.WriteLine(firstLinePoints.Count() + "," + secondLinePoints.Count());
-            var common = wireA.Intersect(wireB);
-            //Console.WriteLine(common.Count());
-            //common.Select(x => Util.CalculateManhattan(0, 0, (int)x.X, (int)x.Y)).ToList().ForEach(x => Console.WriteLine(x));
-            //Console.WriteLine(common.Select(x => Util.CalculateManhattan(0, 0, (int)x.X, (int)x.Y)).First());
-            var res = common.Min(x => Math.Abs(x.X) + Math.Abs(x.Y));
+            var common = wireA.Keys.Intersect(wireB.Keys);
+            var res = common.Min(x => Math.Abs(x.Item1) + Math.Abs(x.Item2));
+            var resB = common.Min(x => wireA[x] + wireB[x]) + 2;
 
-            // get shared
-
-            // Pick closest shared
-
-            return res; 
+            return Tuple.Create(res, resB); 
         }
 
-        static Vector2 up = new Vector2(0, 1);
-        static Vector2 right = new Vector2(1, 0);
+        static Dictionary<(int,int),int> GetPointsInWire(string path) {
+            Dictionary<(int, int), int> result = new Dictionary<(int, int), int>();
 
-        static List<Vector2> GetPointsAlongPath(string path) {
-            List<Vector2> result = new List<Vector2>();
-
-            long x = 0;
-            long y = 0;
+            int x = 0, y = 0, steps = 0;
 
             string[] moves = path.Split(",");
-
             foreach (string move in moves) {
-                char dir = move[0];
                 int dist = int.Parse(move.Substring(1));
-                switch (dir) {
+                switch (move[0]) {
                     case 'U':
-                        result.AddRange(WalkDistance(x, y, up, dist));
-                        y += dist;
+                        for (int i = 0; i < dist; i++) {
+                            result.TryAdd((x, ++y), steps++);
+                        }
                         break;
                     case 'D':
-                        result.AddRange(WalkDistance(x, y, up * -1, dist));
-                        y -= dist;
+                        for (int i = 0; i < dist; i++) {
+                            result.TryAdd((x, --y), steps++);
+                        }
                         break;
                     case 'R':
-                        result.AddRange(WalkDistance(x, y, right, dist));
-                        x += dist;
+                        for (int i = 0; i < dist; i++) {
+                            result.TryAdd((++x, y), steps++);
+                        }
                         break;
                     case 'L':
-                        result.AddRange(WalkDistance(x, y, right * -1, dist));
-                        x -= dist;
+                        for (int i = 0; i < dist; i++) {
+                            result.TryAdd((--x, y), steps++);
+                        }
                         break;
                 }
             }
-
-            return result;
-        }
-
-        static List<Vector2> WalkDistance(long x, long y, Vector2 dir, int distance) {
-            List<Vector2> result = new List<Vector2>();
-            for (int i = 1; i <= distance; i++) {
-                result.Add(new Vector2(x + dir.X * i, y + dir.Y * i));
-            };
             return result;
         }
     }
