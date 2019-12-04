@@ -35,12 +35,22 @@ namespace AdventOfCode2019 {
             var day3 = Day3.TaskA(ReadLinesFromFile("Inputs/Day3Input.txt"));
             //var day2TaskB = Day2.TaskB(ReadLinesFromFile("Inputs/Day2Input.txt"));
             sw.Stop();
-            Console.WriteLine("--- Day 2: 1202 Program Alarm ---");
+            Console.WriteLine("--- Day 3: Crossed Wires ---");
             Console.WriteLine("Answer to part 1 is: " + day3.Item1.ToString());
             Console.WriteLine("Answer to part 2 is: " + day3.Item2.ToString());
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
 
+            #region Day4
+            sw.Start();
+            var day4 = Day4.GetNumberOfPasswords(256310, 732736, false);
+            var day4B = Day4.GetNumberOfPasswords(256310, 732736, true);
+            sw.Stop();
+            Console.WriteLine("--- Day 4: Secure Container ---");
+            Console.WriteLine("Answer to part 1 is: " + day4.ToString());
+            Console.WriteLine("Answer to part 2 is: " + day4B.ToString());
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
         }
 
 
