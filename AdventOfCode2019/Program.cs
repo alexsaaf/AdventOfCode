@@ -51,6 +51,17 @@ namespace AdventOfCode2019 {
             Console.WriteLine("Answer to part 2 is: " + day4B.ToString());
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
+
+            #region Day5
+            sw.Start();
+            var day5 = Day5.SolveIntCodeProgram(ReadLinesFromFile("Inputs/Day5Input.txt"));
+            //var day4B = Day4.GetNumberOfPasswords(256310, 732736, true);
+            sw.Stop();
+            Console.WriteLine("--- Day 4: Secure Container ---");
+            Console.WriteLine("Answer to part 1 is: " + day5.ToString());
+            //Console.WriteLine("Answer to part 2 is: " + day4B.ToString());
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
         }
 
 
