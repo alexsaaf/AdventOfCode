@@ -62,6 +62,27 @@ namespace AdventOfCode2019 {
             //Console.WriteLine("Answer to part 2 is: " + day4B.ToString());
             Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
             #endregion
+
+            #region Day6
+            sw.Start();
+            var day6 = Day6.CalculateOrbits(ReadLinesFromFile("Inputs/Day6Input.txt"));
+            var day6B = Day6.CalculateOrbitsBetween(ReadLinesFromFile("Inputs/Day6Input.txt"));
+            sw.Stop();
+            Console.WriteLine("--- Day 4: Secure Container ---");
+            Console.WriteLine("Answer to part 1 is: " + day6.ToString());
+            Console.WriteLine("Answer to part 2 is: " + day6B.ToString());
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
+
+            #region Day8
+            sw.Start();
+            var day8 = Day8.CheckCorruption(ReadLinesFromFile("Inputs/Day8Input.txt")[0]);
+            sw.Stop();
+            Console.WriteLine("--- Day 8: Space Image Format ---");
+            Console.WriteLine("Answer to part 1 is: " + day8.ToString());
+            Day8.DecodeImage(ReadLinesFromFile("Inputs/Day8Input.txt")[0]);
+            Console.WriteLine("Time elapsed: " + sw.Elapsed.Milliseconds + "\n");
+            #endregion
         }
 
 
